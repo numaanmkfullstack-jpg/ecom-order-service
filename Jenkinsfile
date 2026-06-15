@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     triggers {
-    pollSCM('H/5 * * * *')   // checks GitHub every ~5 minutes
-   }
+        pollSCM('H/5 * * * *')
+    }
 
     environment {
         DOCKERHUB_USER = 'iamnmk777'
