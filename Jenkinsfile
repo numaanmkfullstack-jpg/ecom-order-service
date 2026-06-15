@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+    pollSCM('H/5 * * * *')   // checks GitHub every ~5 minutes
+   }
+
     environment {
         DOCKERHUB_USER = 'iamnmk777'
         IMAGE_NAME     = 'ecom-order-service'
